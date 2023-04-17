@@ -142,9 +142,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+        return json_encode(['errors' => $model->errors]);
     }
 
     public function actionView()
